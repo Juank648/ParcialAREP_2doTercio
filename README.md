@@ -134,7 +134,7 @@ Desde el proxy probamos a calcular el arcocoseno de 0.6:
 
 Ahora el logaritmo de 56:
 
-![img 1](images/9.png)
+![img 1](images/10.png)
 
 Prueba en video en el archivo Demo
 
