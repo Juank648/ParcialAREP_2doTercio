@@ -9,8 +9,8 @@ import java.io.IOException;
 
 public class HTTPClient {
     private OkHttpClient httpClient;
-    private String baseUrl="http://127.0.0.1";
-    private String[] ports={":8001", ":8002"};
+    private String baseUrl="http://";
+    private String[] ports={"ec2-3-91-176-176.compute-1.amazonaws.com:8001", "ec2-54-86-67-105.compute-1.amazonaws.com:8001"};
     public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
     private int serverNumber=0;
 
