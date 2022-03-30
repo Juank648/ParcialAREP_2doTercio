@@ -9,7 +9,7 @@ Se realizo una implementacion de un service proxy y una calculadora de microserv
 ### Requerimientos
 Diseñe un prototipo de calculadora de microservicios que tenga un servicios de matemáticas con al menos dos funciones implementadas y desplegadas en al menos dos instancias virtuales de EC2. Además debe implementar un service proxy que recibe las solicitudes de servicios y se las delega a las dos instancias usando un algoritmo de round-robin. Asegúrese que se pueden configurar las direcciones y puertos de las instancias en el porxy usando variables de entorno del sistema operativo. Cada estudiante debe seleccionar para desarrollar dos funciones matemáticas de acuerdo a los dos últimos dígitos de su cédula como se especifica en la lista (Si sus dos últimos dígitos de su cédula son el mismo use el siguiente dígito que sea diferente). Todas las funciones reciben un solo parámetro de tipo "Double" y retornan una parámetro de tipo "Double"
 
-![img 1](images/1.png)
+![img 1](images/arq.png)
 
 0. log
 1. ln
@@ -76,3 +76,73 @@ Ejecucion local
 4. Le pedimos el logaritmo de 89:
 
 ![img 1](images/4.png)
+
+### Amazon EC2
+
+1. Creamos tres instancias de Amazon EC2
+2. Dedicamos una instancia para Calculadora 1
+3. Ingresamos a la misma por medio de SSH
+4. Instalamos jdk 8:
+
+```
+sudo yum install java-1.8.0-openjdk
+```
+
+5. Instalamos git: 
+
+```
+sudo yum install git
+```
+
+6. Clonamos el repositorio:
+
+```
+git clone https://github.com/Juank648/ParcialAREP_2doTercio
+```
+
+![img 1](images/5.png)
+
+7. Accedemos a ParcialAREP_2doTercio
+
+```
+cd ParcialAREP_2doTercio
+```
+
+8. Accedemos a Calculadora
+
+```
+cd Calculadora
+```
+
+9. Ejecutamos la aplicacion:
+
+```
+java -cp "target/classes:targer/dependency/*" com.edu.eci.Calculadora.CalculadoraMain
+```
+![img 1](images/7.png)
+
+10. Repetimos los pasos del 3 al 9 para la segunda instancia de Calculadora
+11. Repetimos los pasos del 3 al 7 para la tercera instancia correspondiente a Proxy
+12. Ejecutamos lo siguiente:
+![img 1](images/8.png)
+
+#### Pruebas EC2
+
+Desde el proxy probamos a calcular el arcocoseno de 0.6:
+![img 1](images/9.png)
+Ahora el logaritmo de 56:
+![img 1](images/9.png)
+Prueba en video en el archivo Demo
+
+## Autor
+Juan Carlos Alayon Molina
+
+
+
+
+
+
+
+
+
+
