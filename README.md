@@ -129,9 +129,13 @@ java -cp "target/classes:targer/dependency/*" com.edu.eci.Calculadora.Calculador
 #### Pruebas EC2
 
 Desde el proxy probamos a calcular el arcocoseno de 0.6:
+
 ![img 1](images/9.png)
+
 Ahora el logaritmo de 56:
+
 ![img 1](images/9.png)
+
 Prueba en video en el archivo Demo
 
 ## Autor
