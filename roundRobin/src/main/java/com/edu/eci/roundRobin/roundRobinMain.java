@@ -18,7 +18,7 @@ public class roundRobinMain {
             System.out.println(req.queryParams("value"));
             String value = req.queryParams("value");
             String response=client.getMessages("/acos?value="+value);
-            //client.changePort();
+            client.changePort();
             return response;
         });
 
@@ -27,7 +27,7 @@ public class roundRobinMain {
             res.type("application/json");
             String value = req.queryParams("value");
             String response=client.getMessages("/log?value="+value);
-            //client.changePort();
+            client.changePort();
             return response;
         });
 
